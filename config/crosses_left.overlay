@@ -1,3 +1,7 @@
+&trackball_peripheral {
+    /delete-property/ x-invert;
+};
+
 &trackball_peripheral_split {
   device = <&trackball_peripheral>;
   input-processors
