@@ -4,6 +4,11 @@
 #include <dt-bindings/zmk/pointing.h>
 #include <scroll-snap.dtsi>
 
+&caps_word {
+	// Tells Caps Word to stay alive if you type an underscore, minus, or backspace
+	continue-list = <MINUS BACKSPACE DELETE>;
+};
+
 / {
     macros {
         lang_en: lang_en {
@@ -71,11 +76,6 @@
     };
 	
 	behaviors {
-		&caps_word {
-            // Tells Caps Word to stay alive if you type an underscore, minus, or backspace
-            continue-list = <MINUS BACKSPACE DELETE>;
-        };
-	
         alt_tab: alt_tab {
             compatible = "zmk,behavior-tri-state";
             #binding-cells = <0>;
