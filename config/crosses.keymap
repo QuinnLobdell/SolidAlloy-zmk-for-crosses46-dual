@@ -78,7 +78,7 @@
 		mo_cw: layer_hold_caps_word {
             compatible = "zmk,behavior-hold-tap";
             // Set to 1 because we only need to pass the layer number!
-            #binding-cells = <1>; 
+            #binding-cells = <2>; 
             
             // "balanced" is recommended so fast typing doesn't accidentally trigger the layer
             flavor = "hold-preferred"; 
