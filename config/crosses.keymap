@@ -112,7 +112,7 @@
 		
 		td_i_caps: tap_dance_i_caps {
             compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <1>;
+            #binding-cells = <0>;
             tapping-term-ms = <200>; // Time window to register the double-tap
             
             // 1st binding = Single Tap, 2nd binding = Double Tap
