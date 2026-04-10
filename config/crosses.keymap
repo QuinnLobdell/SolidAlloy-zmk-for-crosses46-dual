@@ -253,7 +253,7 @@
             >;
 		};
 		
-		mouse_layer {
+		helpers_layer {
             display-name = "Helpers";
             bindings = <
                 &alt_tab   &none     &none     &none     &none     &none     &none       &none     &none       &none       &none    &kp LC(LS(ESC))
