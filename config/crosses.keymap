@@ -81,7 +81,7 @@
             #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <170>;
-            quick-tap-ms = <75>;
+            quick-tap-ms = <120>;
             bindings = <&kp>, <&kp>; // Uses standard keypresses for zero lag
         };
 
@@ -90,7 +90,7 @@
             #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <170>;
-            quick-tap-ms = <75>;
+            quick-tap-ms = <120>;
             bindings = <&mo>, <&kp>; // Uses standard keypresses for zero lag
         };
 		
@@ -134,7 +134,7 @@
             #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <170>;
-            quick-tap-ms = <75>;
+            quick-tap-ms = <120>;
             require-prior-idle-ms = <100>; // Highly recommended for HRM to prevent mid-word misfires
             bindings = <&kp>, <&kp>;
             // The array of all RIGHT-hand keys
@@ -147,7 +147,7 @@
             #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <170>;
-            quick-tap-ms = <75>;
+            quick-tap-ms = <120>;
             require-prior-idle-ms = <100>; 
             bindings = <&kp>, <&kp>;
             // The array of all LEFT-hand keys
@@ -160,7 +160,7 @@
             #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <170>;
-            quick-tap-ms = <75>;
+            quick-tap-ms = <120>;
             require-prior-idle-ms = <100>; // Highly recommended for HRM to prevent mid-word misfires
             bindings = <&mo>, <&kp>;
             // The array of all RIGHT-hand keys
@@ -172,7 +172,7 @@
             #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <170>;
-            quick-tap-ms = <75>;
+            quick-tap-ms = <120>;
             require-prior-idle-ms = <100>; // Highly recommended for HRM to prevent mid-word misfires
             bindings = <&mo>, <&kp>;
             // The array of all RIGHT-hand keys + TAB
@@ -185,7 +185,7 @@
             #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <170>;
-            quick-tap-ms = <75>;
+            quick-tap-ms = <120>;
             require-prior-idle-ms = <100>; 
             bindings = <&mo>, <&kp>;
             // The array of all LEFT-hand keys
@@ -198,7 +198,7 @@
             flavor = "tap-preferred";
             // Lowered to 150ms (or even 135ms) for faster access to the scroll wheel
             tapping-term-ms = <150>; 
-            quick-tap-ms = <75>;
+            quick-tap-ms = <120>;
             bindings = <&mo>, <&kp>;
         };
     };
