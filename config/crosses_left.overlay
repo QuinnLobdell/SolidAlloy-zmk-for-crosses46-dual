@@ -5,8 +5,9 @@
 };
 
 &trackball_peripheral_split {
-  device = <&trackball_peripheral>;
-  input-processors = <&zip_ble_report_rate_limit>;
+	status = "disabled";
+    device = <&trackball_peripheral>;
+    input-processors = <&zip_ble_report_rate_limit>;
 };
 
 &trackball_peripheral {
