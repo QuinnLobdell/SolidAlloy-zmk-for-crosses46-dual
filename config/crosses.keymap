@@ -113,7 +113,7 @@
 		td_i_caps: tap_dance_i_caps {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <170>; // Time window to register the double-tap
+            tapping-term-ms = <190>; // Time window to register the double-tap
             
             // 1st binding = Single Tap, 2nd binding = Double Tap
             bindings = <&kp I>, <&caps_word>;
@@ -122,10 +122,19 @@
 		td_n_num_word: td_n_num_word {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <170>; // Time window to register the double-tap
+            tapping-term-ms = <190>; // Time window to register the double-tap
             
             // 1st binding = Single Tap, 2nd binding = Double Tap
             bindings = <&kp N>, <&num_word 5>;
+        };
+		
+		num_caps: num_caps {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>; // Time window to register the double-tap
+            
+            // 1st binding = Single Tap, 2nd binding = Double Tap
+            bindings = <&num_word 5>, <&caps_word>;
         };
 		
 		// Home Row Mod for the LEFT hand (Triggers only if a RIGHT hand key is pressed)
@@ -212,9 +221,9 @@
             bindings = <
                 &none &none &none &none &none &none   &none &none  &none     &none   &none    &none
                 &kp TAB   &kp Z  &kp P  &kp D  &kp L  &kp X    &kp EQUAL &kp U  &kp O     &kp Y   &kp Q    &kp BSPC
-                &mo_left_tab 4 W &mo_left 6 S  &td_n_num_word  &hrm_left LSHIFT T  &mo_left 7 H  &kp K    &kp MINUS &mo_left 7 E  &hrm_right RSHIFT A     &td_i_caps   &mo_right 6 C &kp B
-                &mo 1 &kp V  &kp F  &lt_scroll 8 G  &kp M  &kp J    &kp FSLH &kp SEMI  &kp DOT &kp COMMA &kp APOS &kp LALT
-                        &kp LGUI   &mo 3    &kp R    &kp SPACE    &kp RET    &kp LALT
+                &mo_left_tab 4 W &mo_left 6 S  &kp N  &hrm_left LSHIFT T  &mo_left 7 H  &kp K    &kp MINUS &mo_left 7 E  &hrm_right RSHIFT A     &kp I   &mo_right 6 C &kp B
+                &mo_cw_break 1 &kp V  &kp F  &lt_scroll 8 G  &kp M  &kp J    &kp FSLH &kp SEMI  &kp DOT &kp COMMA &kp APOS &num_caps
+                        &kp LGUI   &mo_cw_break 3    &kp R    &kp SPACE    &kp RET    &kp LALT
             >;
         };
 
@@ -245,8 +254,8 @@
             bindings = <
                 &none         &none     &none     &none     &none     &none     &none       &none     &none       &none       &none       &none
                 &none         &none     &none     &none     &none     &none     &none       &none     &none       &none       &none       &none
-                &none   &mo 4    &mkp RCLK  &mkp MCLK  &mkp LCLK  &none     &none    &none    &none    &none   &none    &none
-                &none         &mo 8     &kp LCTRL     &kp LSHFT     &none     &none     &none       &none     &none       &none       &none       &none
+                &none     &none     &mo 4    &mkp RCLK  &mkp MCLK  &mkp LCLK    &none    &none    &none    &none   &none    &none
+                &none      &none    &mo 8     &kp LCTRL     &kp LSHFT     &none     &none       &none     &none       &none       &none       &none
                                                      &none         &none     &none     &none     &none     &none     
             >;
         };
@@ -256,8 +265,8 @@
 			bindings = <
                 &none         &none     &none     &none     &none     &none     &none       &none     &none       &none       &none       &kp LC(LS(ESC))
                 &kp LS(TAB)         &none     &none     &none     &none     &none     &none       &none     &none       &none       &none       &none
-                &none         &none     &mkp RCLK  &mkp MCLK  &mkp LCLK  &none     &none  &none     &kp LG(UP)       &kp LS(HOME)   &kp LS(END)       &none
-                &none         &none     &none     &none     &none     &none     &none       &snap_right   &kp LG(DOWN)    &snap_left     &kp LS(PAGE_UP)    &kp LS(PAGE_DOWN)
+                &none         &none     &mkp RCLK  &mkp MCLK  &mkp LCLK  &none     &none  &none     &kp LG(UP)       &none   &none       &none
+                &none         &none     &none     &none     &none     &none     &none       &snap_right   &kp LG(DOWN)    &snap_left     &none    &none
                                                      &none     &none     &none     &none       &none     &none     
             >;
 		};
@@ -289,7 +298,7 @@
             bindings = <
                 &alt_tab   &none     &none     &none     &none     &none     &none       &none     &none       &none       &none    &kp ESC
                 &kp RSHIFT		&none    &kp LS(N9)   &kp LS(N0)   &none   &kp LC(LS(T))   &kp LS(LEFT_BRACKET)    &kp LS(RIGHT_BRACKET)    &kp LS(N8)    &kp LS(N1)    &kp GRAVE    &kp DEL
-                &kp LA(W)   &kp C_BRI_DEC   &kp C_BRI_INC    &kp LS(F3)       &kp F3    &kp C_PLAY_PAUSE     &kp LEFT_BRACKET    &kp RIGHT_BRACKET    &kp UP    &kp HOME   &kp END    &none
+                &kp LA(W)   &none   &kp LCTRL    &kp LSHIFT       &none    &kp C_PLAY_PAUSE     &kp LEFT_BRACKET    &kp RIGHT_BRACKET    &kp UP    &kp HOME   &kp END    &none
                 &sk LCTRL   &kp C_MUTE   &kp C_VOLUME_DOWN    &kp C_VOLUME_UP   &kp LG(V)   &kp LG(LS(S))    &kp BACKSLASH    &kp LEFT    &kp DOWN    &kp RIGHT   &kp PAGE_UP    &kp PAGE_DOWN
                                                      &kp LG(P)   &trans   &trans     &lang_en    &lang_ua    &lang_jp     
             >;
