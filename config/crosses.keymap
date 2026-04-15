@@ -245,6 +245,12 @@
             bindings = <&mo_mod 5 LCTRL>; 
         };
 		
+		combo_num_f {
+            timeout-ms = <50>;
+            key-positions = <33 52>; 
+            bindings = <&mo 6>; 
+        };
+		
 		combo_shortcut_shift {
             timeout-ms = <50>;
             key-positions = <36 49>; 
