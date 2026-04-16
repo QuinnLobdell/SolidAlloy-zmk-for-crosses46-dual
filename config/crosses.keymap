@@ -453,11 +453,11 @@
         base_layer {
             display-name = "Base";
             bindings = <
-&none    &none  &none          &none               &none          &none  &none      &none          &none                &none          &none         &none
-&kp ESC  &kp Z  &kp P          &kp D               &kp L          &kp X  &kp EQUAL  &kp U          &kp O                &kp Y          &kp Q         &kp BSPC
-&kp W    &kp S  &mo_mouse 3 N  &hrm_left LSHIFT T  &mo_left 0 H   &kp K  &kp MINUS  &mo_right 0 E  &hrm_right RSHIFT A  &mo_right 0 I  &kp C         &kp B
-&mo 1    &kp V  &kp F          &lt_scroll 0 G      &kp M          &kp J  &kp SEMI   &kp APOS       &kp DOT              &kp COMMA      &kp LS(APOS)  &caps_word
-                               &kp LGUI            &mo_tab 0 TAB  &to 1  &kp SPACE  &kp RET        &kp LALT
+&kp ESCAPE  &none  &none          &none               &none          &none  &none      &none          &none                &none          &none         &none
+&kp ESC     &kp Z  &kp P          &kp D               &kp L          &kp X  &kp EQUAL  &kp U          &kp O                &kp Y          &kp Q         &kp BSPC
+&kp W       &kp S  &mo_mouse 3 N  &hrm_left LSHIFT T  &mo_left 0 H   &kp K  &kp MINUS  &mo_right 0 E  &hrm_right RSHIFT A  &mo_right 0 I  &kp C         &kp B
+&mo 1       &kp V  &kp F          &lt_scroll 0 G      &kp M          &kp J  &kp SEMI   &kp APOS       &kp DOT              &kp COMMA      &kp LS(APOS)  &caps_word
+                                  &kp LGUI            &mo_tab 0 TAB  &to 1  &kp SPACE  &kp RET        &kp LALT
             >;
         };
 
