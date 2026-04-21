@@ -25,15 +25,6 @@
         layers = <4>;
         input-processors = <&zip_ble_report_rate_limit>;
     };
-	
-	scroll_override {
-		layers = <8>;
-	    input-processors
-			= <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT)>
-			, <&zip_xy_to_scroll_mapper>
-			, <&zip_scroll_snap>
-			, <&zip_ble_report_rate_limit>;
-	};
 };
 
 &trackball_peripheral_listener {
