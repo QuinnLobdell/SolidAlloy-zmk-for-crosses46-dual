@@ -1,7 +1,8 @@
 &trackball_peripheral {
+    status = "okay";
     cpi = <200>;
     y-invert;
-	/delete-property/ x-invert;
+    /delete-property/ x-invert;
 };
 
 &trackball_peripheral_split {
@@ -10,6 +11,3 @@
     input-processors = <&zip_ble_report_rate_limit>;
 };
 
-&trackball_peripheral {
-	status = "disabled";
-};
