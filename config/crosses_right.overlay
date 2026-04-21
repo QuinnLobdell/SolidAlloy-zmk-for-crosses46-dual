@@ -29,7 +29,6 @@
 
 &trackball_peripheral_listener {
   status = "okay";
-  device = <&trackball_peripheral>; // Make sure it knows what device to listen to
   input-processors
     = <&zip_xy_to_scroll_mapper>
     , <&zip_scroll_snap>;
